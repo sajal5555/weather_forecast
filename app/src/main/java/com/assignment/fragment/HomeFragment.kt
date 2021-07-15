@@ -84,7 +84,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnMapRe
             mMap.clear()
             mMap.addMarker(MarkerOptions().position(location))
 
-            Toast.makeText(activity, "`$area` added in the list", Toast.LENGTH_SHORT).show()
+            if (!area.isNullOrBlank())
+                Toast.makeText(activity, "`$area` added in the list", Toast.LENGTH_SHORT).show()
 
         }
     }
