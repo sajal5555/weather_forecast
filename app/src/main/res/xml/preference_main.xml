@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Weather Setting">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues"
+            android:key="listPref"
+            android:summary="Click here to select your unit system"
+            android:title="Select unit system" />
+
+        <Preference
+            android:defaultValue="true"
+            android:key="reset_bookmark"
+            android:summary="It will clear all stored bookmarks"
+            android:title="Reset bookmarks" />
+
+        <Preference
+            android:defaultValue="true"
+            android:key="reset_map_locations"
+            android:summary="It will clear all stored map locations"
+            android:title="Reset map locations" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
