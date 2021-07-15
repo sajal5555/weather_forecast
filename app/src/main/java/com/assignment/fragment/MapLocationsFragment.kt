@@ -10,7 +10,7 @@ import com.assignment.BR
 import com.assignment.R
 import com.assignment.adapter.MapLocationsAdapter
 import com.assignment.databinding.FragmentMaplocationsBinding
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.viewmodel.MapLocationsViewModel
 import com.assignment.utilities.SharedPrefUtil
 import kotlinx.android.synthetic.main.fragment_maplocations.*

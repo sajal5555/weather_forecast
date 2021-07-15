@@ -4,7 +4,7 @@ import android.location.Location
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import com.assignment.models.responsemodel.CityWeatherDetailResponseModel
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.repository.RepoResult
 import com.assignment.repository.WeatherServicesImpl
 import com.assignment.utilities.HandleOnceLiveEvent

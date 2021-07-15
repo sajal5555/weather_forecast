@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import com.assignment.R
 import com.assignment.activity.CityWeatherInformationActivity
-import com.assignment.repository.Constants.PREF_UNIT_SYSTEM
+import com.assignment.models.constants.Constants.PREF_UNIT_SYSTEM
 import com.assignment.utilities.DateTimeUtil
 import com.assignment.utilities.SharedPrefUtil
 
@@ -35,7 +35,7 @@ fun AppCompatImageButton.visibility(cityName: String?) {
 
 @BindingAdapter("convertDate")
 fun AppCompatTextView.convertDate(milliTime: Int) {
-    this.text = DateTimeUtil.getDate(milliTime)
+    this.text = DateTimeUtil().getDate(milliTime)
 }
 
 @BindingAdapter("src")

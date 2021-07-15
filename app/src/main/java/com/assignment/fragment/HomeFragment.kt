@@ -11,7 +11,7 @@ import com.assignment.R
 import com.assignment.adapter.TAB_TITLES
 import com.assignment.adapter.TabsPagerAdapter
 import com.assignment.databinding.FragmentHomeBinding
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.utilities.SharedPrefUtil
 import com.assignment.utilities.observeOnce
 import com.assignment.viewmodel.HomeViewModel

@@ -3,7 +3,7 @@ package com.assignment.utilities
 import android.content.Context
 import com.assignment.CustomApplication
 import com.assignment.R
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.google.gson.Gson
 import java.util.*
 import kotlin.collections.ArrayList

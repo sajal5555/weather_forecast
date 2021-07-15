@@ -8,7 +8,7 @@ import com.assignment.BR
 import com.assignment.R
 import com.assignment.adapter.BookmarkAdapter
 import com.assignment.databinding.FragmentBookmarkBinding
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.utilities.SharedPrefUtil
 import com.assignment.viewmodel.BookmarkViewModel
 import kotlinx.android.synthetic.main.fragment_topcities.*

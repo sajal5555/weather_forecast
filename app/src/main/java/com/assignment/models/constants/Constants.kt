@@ -1,4 +1,4 @@
-package com.assignment.repository
+package com.assignment.models.constants
 
 /**
  * @author Sajal Jain

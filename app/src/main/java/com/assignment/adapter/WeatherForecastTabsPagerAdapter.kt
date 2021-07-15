@@ -26,7 +26,7 @@ class WeatherForecastTabsPagerAdapter(
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        return DateTimeUtil.getDay(tabsDetail[position][0].dt)
+        return DateTimeUtil().getDay(tabsDetail[position][0].dt)
     }
 
     override fun getCount(): Int {

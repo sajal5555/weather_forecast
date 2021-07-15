@@ -1,5 +1,7 @@
 package com.assignment.repository
 
+import com.assignment.interfaces.IWeatherServices
+import com.assignment.models.constants.Constants
 import com.assignment.models.responsemodel.CityWeatherDetailResponseModel
 import com.assignment.models.responsemodel.WeatherForecastResponseModel
 import com.assignment.utilities.SharedPrefUtil

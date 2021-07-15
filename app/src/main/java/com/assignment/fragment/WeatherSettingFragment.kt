@@ -7,7 +7,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.assignment.R
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.utilities.SharedPrefUtil
 const val KEY_LIST_PREFERENCE = "listPref"
 

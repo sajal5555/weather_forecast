@@ -3,7 +3,7 @@ package com.assignment.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import com.assignment.models.responsemodel.WeatherDataModel
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.repository.RepoResult
 import com.assignment.repository.WeatherServicesImpl
 import com.assignment.utilities.HandleOnceLiveEvent
@@ -34,7 +34,7 @@ class CityWeatherInformationViewModel : BaseViewModel() {
                     val distinctDays = HashSet<String>()
                     weatherList?.list?.let {
                         for (obj in it) {
-                            distinctDays.add(DateTimeUtil.getDay(obj.dt))
+                            distinctDays.add(DateTimeUtil().getDay(obj.dt))
                         }
 
                         val days = ArrayList<String>()
@@ -45,7 +45,7 @@ class CityWeatherInformationViewModel : BaseViewModel() {
                             val temp: MutableList<WeatherDataModel> = ArrayList<WeatherDataModel>()
 
                             for (data in it) {
-                                if (DateTimeUtil.getDay(data.dt) == day) {
+                                if (DateTimeUtil().getDay(data.dt) == day) {
                                     temp.add(data)
                                 }
                             }

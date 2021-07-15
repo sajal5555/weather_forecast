@@ -13,7 +13,7 @@ import com.assignment.BR
 import com.assignment.R
 import com.assignment.databinding.ActivityHomeBinding
 import com.assignment.fragment.HomeFragment
-import com.assignment.repository.Constants
+import com.assignment.models.constants.Constants
 import com.assignment.utilities.SharedPrefUtil
 import com.assignment.viewmodel.HomeViewModel
 import com.google.android.gms.location.LocationServices
