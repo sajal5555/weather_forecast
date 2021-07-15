@@ -28,7 +28,7 @@ import java.util.*
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnMapReadyCallback {
     private lateinit var adapter: TabsPagerAdapter
-    private lateinit var mMap: GoogleMap
+    private var mMap: GoogleMap? = null
     private var currentItem = 0
     override fun initializeLayoutId(): Int {
         return R.layout.fragment_home
@@ -58,19 +58,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnMapRe
                 return@observeOnce
 
             val currentPosition = LatLng(it.latitude, it.longitude)
-            mMap.addMarker(
+            mMap?.addMarker(
                 MarkerOptions()
                     .position(currentPosition)
                     .title("You are here")
             )
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(currentPosition))
+            mMap?.moveCamera(CameraUpdateFactory.newLatLng(currentPosition))
         }
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        mMap.setOnMapClickListener { location ->
+        mMap?.setOnMapClickListener { location ->
             //  allPoints.add(it)
             val address = Geocoder(context, Locale.getDefault()).getFromLocation(
                 location.latitude,
@@ -81,8 +81,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnMapRe
             val area = address?.get(0)?.subAdminArea
             SharedPrefUtil.addMapLocationEntry(area)
 
-            mMap.clear()
-            mMap.addMarker(MarkerOptions().position(location))
+            mMap?.clear()
+            mMap?.addMarker(MarkerOptions().position(location))
 
             if (!area.isNullOrBlank())
                 Toast.makeText(activity, "`$area` added in the list", Toast.LENGTH_SHORT).show()
@@ -154,7 +154,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnMapRe
 
     override fun onDestroy() {
         super.onDestroy()
-        pager.unregisterOnPageChangeCallback(callback)
+        pager?.unregisterOnPageChangeCallback(callback)
     }
 
     companion object {
